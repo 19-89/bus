@@ -1,7 +1,6 @@
 // Simulate config options from your production environment by
 // customising the .env file in your project's root folder.
 require('dotenv').load();
-
 // Require keystone
 var keystone = require('keystone');
 
@@ -23,6 +22,7 @@ keystone.init({
 	'emails': 'templates/emails',
 	
 	'auto update': true,
+	'mongo': 'mongodb://admin:admin21@ds045057.mongolab.com:45057/kstone',
 	'session': true,
 	'auth': true,
 	'user model': 'Y',
