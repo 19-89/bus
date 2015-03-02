@@ -50,7 +50,7 @@ html
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') kstone
+						a.navbar-brand(href='/') Теплый коврик
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
@@ -58,10 +58,10 @@ html
 						ul.nav.navbar-nav.navbar-right
 							if user
 								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
+									li: a(href='/keystone') Админка
+								li: a(href='/keystone/signout') Выход
 							else
-								li: a(href='/keystone/signin') Sign In
+								li: a(href='/keystone/signin') Вход
 
 		//- BODY
 		#body

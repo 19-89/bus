@@ -24,10 +24,10 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	
 	locals.navLinks = [
-		{ label: 'Home',		key: 'home',		href: '/' },
-		{ label: 'Blog',		key: 'blog',		href: '/blog' },
-		{ label: 'Gallery',		key: 'gallery',		href: '/gallery' },
-		{ label: 'Contact',		key: 'contact',		href: '/contact' }
+		{ label: 'Главная',		key: 'home',		href: '/' },
+		{ label: 'Товары',		key: 'blog',		href: '/blog' },
+		{ label: 'Галерея',		key: 'gallery',		href: '/gallery' },
+		{ label: 'Заказать',		key: 'contact',		href: '/contact' }
 	];
 	
 	locals.user = req.user;
@@ -64,7 +64,7 @@ exports.flashMessages = function(req, res, next) {
 exports.requireUser = function(req, res, next) {
 	
 	if (!req.user) {
-		req.flash('error', 'Please sign in to access this page.');
+		req.flash('error', 'Пожалуйста авторизуйтесь, нет доступа на страницу.');
 		res.redirect('/keystone/signin');
 	} else {
 		next();
