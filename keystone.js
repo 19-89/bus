@@ -80,8 +80,6 @@ keystone.set('email rules', [{
 	replace: (keystone.get('env') == 'production') ? 'https://dry-bayou-9183.herokuapp.com//keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
-keystone.set('cloudinary config', { cloud_name: 'dw2jydsth', api_key: '125365349496167', api_secret: 'ZyDGAgMqBEQD8RBsCm7bCp8PSAQ' });
-
 // Load your project's email test routes
 
 keystone.set('email tests', require('./routes/emails'));
@@ -94,6 +92,9 @@ keystone.set('nav', {
 	'enquiries': 'enquiries',
 	'ys': 'ys'
 });
+
+keystone.set('cloudinary config', { cloud_name: 'dw2jydsth', api_key: '125365349496167', api_secret: 'ZyDGAgMqBEQD8RBsCm7bCp8PSAQ' });
+
 
 // Start Keystone to connect to your database and initialise the web server
 
