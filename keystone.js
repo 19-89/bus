@@ -22,7 +22,7 @@ keystone.init({
 	'emails': 'templates/emails',
 	
 	'auto update': true,
-	'mongo': 'mongodb://admin:admin21@ds045057.mongolab.com:45057/kstone',
+	'mongo': 'mongodb://admin:admin21@ds045998.mongolab.com:45998/busygin',
 	'session': true,
 	'auth': true,
 	'user model': 'Y',
@@ -74,10 +74,10 @@ keystone.set('email locals', {
 // other rules your email templates require.
 keystone.set('email rules', [{
 	find: '/images/',
-	replace: (keystone.get('env') == 'production') ? 'https://dry-bayou-9183.herokuapp.com//images/' : 'http://localhost:3000/images/'
+	replace: (keystone.get('env') == 'production') ? 'https://tranquil-shore-9254.herokuapp.com//images/' : 'http://localhost:3000/images/'
 }, {
 	find: '/keystone/',
-	replace: (keystone.get('env') == 'production') ? 'https://dry-bayou-9183.herokuapp.com//keystone/' : 'http://localhost:3000/keystone/'
+	replace: (keystone.get('env') == 'production') ? 'https://tranquil-shore-9254.herokuapp.com//keystone/' : 'http://localhost:3000/keystone/'
 }]);
 
 // Load your project's email test routes
