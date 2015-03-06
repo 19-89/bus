@@ -24,13 +24,13 @@ mixin post(post)
 
 block intro
 	.container
-		h1= data.category ? data.category.name : 'Список товаров'
+		h1= data.category ? data.category.name : 'Список тем'
 
 block content
 	.container: .row
 		.col-sm-8.col-md-9
 			if filters.category && !data.category
-				h3.text-muted Категория неизвестна.
+				h3.text-muted Тема неизвестна.
 			else
 				if data.posts.results.length
 					if data.posts.totalPages > 1
@@ -62,14 +62,14 @@ block content
 								li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
 				else
 					if data.category
-						h3.text-muted В данной категории пока ничего не добавлено #{data.category.name}.
+						h3.text-muted В данной теме пока ничего не добавлено #{data.category.name}.
 					else
-						h3.text-muted Нет категорий.
+						h3.text-muted Нет тем.
 		
 		if data.categories.length
 			.col-sm-4.col-md-3
-				h2 Категории
+				h2 Темы
 				.list-group(style='margin-top: 70px;')
-					a(href='/blog', class=!data.category ? 'active' : false).list-group-item Все категории
+					a(href='/blog', class=!data.category ? 'active' : false).list-group-item Все темы
 					each cat in data.categories
 						a(href='/blog/' + cat.key, class=data.category && data.category.id == cat.id ? 'active' : false).list-group-item= cat.name
